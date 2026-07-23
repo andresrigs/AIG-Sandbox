@@ -1,0 +1,6 @@
+unique_name: m_TFACT_KPI_NET_WRITTEN_PREMIUM_AMT_sum
+object_type: metric
+label: Net Written Premium Amount
+calculation_method: sum
+column: NET_WRITTEN_PREMIUM_AMT
+dataset: TFACT_KPI

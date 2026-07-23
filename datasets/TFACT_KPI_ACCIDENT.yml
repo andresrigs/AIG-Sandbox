@@ -1,0 +1,74 @@
+unique_name: TFACT_KPI_ACCIDENT
+object_type: dataset
+label: TFACT_KPI_ACCIDENT
+columns:
+  - name: FACT_GCR_MACHINE_KPI_ID
+    data_type: decimal(38,0)
+  - name: DIM_SNAPSHOT_DATE_ID
+    data_type: decimal(38,0)
+  - name: DIM_FISCAL_MONTH_END_DATE_ID
+    data_type: decimal(38,0)
+  - name: DIM_ACCIDENT_MONTH_END_DATE_ID
+    data_type: decimal(38,0)
+  - name: DIM_POLICY_ID
+    data_type: decimal(38,0)
+  - name: DIM_POLICY_KEY
+    data_type: string
+  - name: DIM_CLAIM_ID
+    data_type: decimal(38,0)
+  - name: DIM_CLAIM_KEY
+    data_type: string
+  - name: DIM_LOCATION_ID
+    data_type: decimal(38,0)
+  - name: DIM_LOCATION_KEY
+    data_type: string
+  - name: DIM_COMPANY_ID
+    data_type: decimal(38,0)
+  - name: DIM_COMPANY_KEY
+    data_type: string
+  - name: DIM_BUSINESS_UNIT_ID
+    data_type: decimal(38,0)
+  - name: DIM_BUSINESS_UNIT_KEY
+    data_type: string
+  - name: DIM_CLIENT_ID
+    data_type: decimal(38,0)
+  - name: DIM_CLIENT_KEY
+    data_type: string
+  - name: DIM_POLICY_COVERAGE_ID
+    data_type: decimal(38,0)
+  - name: DIM_POLICY_COVERAGE_KEY
+    data_type: string
+  - name: GROSS_WRITTEN_PREMIUM_AMT
+    data_type: decimal(18,2)
+  - name: NET_WRITTEN_PREMIUM_AMT
+    data_type: decimal(18,2)
+  - name: NET_EARNED_PREMIUM_AMT
+    data_type: decimal(18,2)
+  - name: INCURRED_LOSS_AMT
+    data_type: decimal(18,2)
+  - name: PAID_LOSS_AMT
+    data_type: decimal(18,2)
+  - name: OUTSTANDING_RESERVE_AMT
+    data_type: decimal(18,2)
+  - name: CLAIM_EXPENSE_AMT
+    data_type: decimal(18,2)
+  - name: NET_COMMISSION_AMT
+    data_type: decimal(18,2)
+  - name: UNDERWRITING_EXPENSE_AMT
+    data_type: decimal(18,2)
+  - name: INVESTMENT_INCOME_AMT
+    data_type: decimal(18,2)
+  - name: OTHER_FINANCIAL_REVENUE_AMT
+    data_type: decimal(18,2)
+  - name: TAX_AND_OTHER_EXPENSE_AMT
+    data_type: decimal(18,2)
+  - name: POLICY_COUNT
+    data_type: decimal(38,0)
+  - name: CLAIM_COUNT
+    data_type: decimal(38,0)
+  - name: CREATE_TS
+    data_type: datetime
+  - name: BATCH_ID
+    data_type: decimal(38,0)
+connection_id: con_SE_DEMO_LIBRARY_AIG_POT
+table: TFACT_KPI
