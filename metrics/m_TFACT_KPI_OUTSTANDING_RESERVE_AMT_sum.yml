@@ -4,3 +4,4 @@ label: Outstanding Reserve Amount
 calculation_method: sum
 column: OUTSTANDING_RESERVE_AMT
 dataset: TFACT_KPI
+format: $#,##0.00

@@ -1,6 +1,7 @@
 unique_name: Sandbox
 object_type: model
 label: Sandbox
+dimensions: []
 metrics:
   - unique_name: m_TFACT_KPI_PAID_LOSS_AMT_sum
     folder: Amount Metrics
@@ -8,7 +9,6 @@ metrics:
     folder: Amount Metrics
   - unique_name: m_TFACT_KPI_OUTSTANDING_RESERVE_AMT_sum
     folder: Amount Metrics
-  - unique_name: Sample Calculation
 relationships:
   - unique_name: TFACT_KPI_DIM_SNAPSHOT_DATE_ID_to_Date Dimension_Date Level
     from:
