@@ -1,0 +1,39 @@
+unique_name: Sandbox
+object_type: model
+label: Sandbox
+metrics:
+  - unique_name: m_TFACT_KPI_PAID_LOSS_AMT_sum
+    folder: Amount Metrics
+  - unique_name: m_TFACT_KPI_INCURRED_LOSS_AMT_sum
+    folder: Amount Metrics
+  - unique_name: m_TFACT_KPI_OUTSTANDING_RESERVE_AMT_sum
+    folder: Amount Metrics
+  - unique_name: Sample Calculation
+relationships:
+  - unique_name: TFACT_KPI_DIM_SNAPSHOT_DATE_ID_to_Date Dimension_Date Level
+    from:
+      dataset: TFACT_KPI
+      join_columns:
+        - DIM_SNAPSHOT_DATE_ID
+    role_play: Snapshot {0}
+    to:
+      dimension: Date Dimension
+      level: Date Level
+  - unique_name: TFACT_KPI_DIM_FISCAL_MONTH_END_DATE_ID_to_Date Dimension_Date Level
+    from:
+      dataset: TFACT_KPI
+      join_columns:
+        - DIM_FISCAL_MONTH_END_DATE_ID
+    role_play: Fiscal {0}
+    to:
+      dimension: Date Dimension
+      level: Date Level
+  - unique_name: TFACT_KPI_DIM_ACCIDENT_MONTH_END_DATE_ID_to_Date Dimension_Date Level
+    from:
+      dataset: TFACT_KPI
+      join_columns:
+        - DIM_ACCIDENT_MONTH_END_DATE_ID
+    role_play: Accident {0}
+    to:
+      dimension: Date Dimension
+      level: Date Level

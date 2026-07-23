@@ -1,0 +1,46 @@
+unique_name: TDIM_DATE
+object_type: dataset
+label: TDIM_DATE
+columns:
+  - name: DIM_DATE_ID
+    data_type: decimal(38,0)
+  - name: FULL_DT
+    data_type: date
+  - name: DOMESTIC_INTERNATIONAL_CD
+    data_type: string
+  - name: DAY_NM
+    data_type: string
+  - name: DAY_OF_WEEK_NO
+    data_type: string
+  - name: DAY_OF_MONTH_NO
+    data_type: string
+  - name: DAY_OF_QUARTER_NO
+    data_type: string
+  - name: DAY_OF_YEAR_NO
+    data_type: string
+  - name: MONTH_NO
+    data_type: string
+  - name: MONTH_NM
+    data_type: string
+  - name: MONTH_OF_QUARTER_NO
+    data_type: string
+  - name: QUARTER_NO
+    data_type: string
+  - name: YEAR_NO
+    data_type: string
+  - name: MONTH_YEAR_NO
+    data_type: string
+  - name: WEEKDAY_IN
+    data_type: string
+  - name: WEEKEND_IN
+    data_type: string
+  - name: HOLIDAY_IN
+    data_type: string
+  - name: HOLIDAY_NM
+    data_type: string
+  - name: CREATE_TS
+    data_type: datetime
+  - name: BATCH_ID
+    data_type: decimal(38,0)
+connection_id: con_SE_DEMO_LIBRARY_AIG_POT
+table: TDIM_DATE

@@ -1,0 +1,6 @@
+unique_name: m_TFACT_KPI_INCURRED_LOSS_AMT_sum
+object_type: metric
+label: Incurred Loss Amount
+calculation_method: sum
+column: INCURRED_LOSS_AMT
+dataset: TFACT_KPI

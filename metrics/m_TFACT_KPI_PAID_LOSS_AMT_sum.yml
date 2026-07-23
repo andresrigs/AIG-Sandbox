@@ -1,0 +1,6 @@
+unique_name: m_TFACT_KPI_PAID_LOSS_AMT_sum
+object_type: metric
+label: Paid Loss Amount
+calculation_method: sum
+column: PAID_LOSS_AMT
+dataset: TFACT_KPI

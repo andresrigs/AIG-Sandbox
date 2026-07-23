@@ -1,0 +1,6 @@
+unique_name: m_TFACT_KPI_OUTSTANDING_RESERVE_AMT_sum
+object_type: metric
+label: Outstanding Reserve Amount
+calculation_method: sum
+column: OUTSTANDING_RESERVE_AMT
+dataset: TFACT_KPI

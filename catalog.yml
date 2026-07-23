@@ -1,0 +1,6 @@
+version: 1
+unique_name: AIG Sandbox
+object_type: catalog
+label: AIG Sandbox
+aggressive_agg_promotion: false
+build_speculative_aggs: true

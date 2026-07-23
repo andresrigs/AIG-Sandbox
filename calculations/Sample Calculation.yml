@@ -1,0 +1,6 @@
+unique_name: Sample Calculation
+object_type: metric_calc
+label: Sample Calculation
+expression: >-
+  ALLMEMBER([Accident Date Dimension].[Accident Date Dimension
+  Hierarchy].[Accident Date Level])

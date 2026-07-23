@@ -1,0 +1,54 @@
+unique_name: Date Dimension
+object_type: dimension
+label: Date Dimension
+hierarchies:
+  - unique_name: Date Dimension Hierarchy
+    label: Date Dimension Hierarchy
+    levels:
+      - unique_name: Year Level
+      - unique_name: Month Level
+        secondary_attributes:
+          - unique_name: MONTH_OF_QUARTER_NO
+            label: MONTH_OF_QUARTER_NO
+            contains_unique_names: false
+            dataset: TDIM_DATE
+            is_unique_key: false
+            key_columns:
+              - MONTH_OF_QUARTER_NO
+            name_column: MONTH_OF_QUARTER_NO
+      - unique_name: Date Level
+        secondary_attributes:
+          - unique_name: DAY_OF_YEAR_NO
+            label: DAY_OF_YEAR_NO
+            contains_unique_names: false
+            dataset: TDIM_DATE
+            is_unique_key: false
+            key_columns:
+              - DAY_OF_YEAR_NO
+            name_column: DAY_OF_YEAR_NO
+level_attributes:
+  - unique_name: Date Level
+    label: Date Level
+    contains_unique_names: false
+    dataset: TDIM_DATE
+    key_columns:
+      - DIM_DATE_ID
+    name_column: FULL_DT
+    time_unit: day
+  - unique_name: Month Level
+    label: Month Level
+    contains_unique_names: false
+    dataset: TDIM_DATE
+    key_columns:
+      - MONTH_YEAR_NO
+    name_column: MONTH_NM
+    time_unit: month
+  - unique_name: Year Level
+    label: Year Level
+    contains_unique_names: false
+    dataset: TDIM_DATE
+    key_columns:
+      - YEAR_NO
+    name_column: YEAR_NO
+    time_unit: year
+type: time
