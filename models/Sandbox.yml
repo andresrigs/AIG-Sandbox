@@ -9,7 +9,6 @@ metrics:
     folder: Amount Metrics
   - unique_name: m_TFACT_KPI_OUTSTANDING_RESERVE_AMT_sum
     folder: Amount Metrics
-  - unique_name: Sample Calculation
   - unique_name: 30 days Running Sum
 relationships:
   - unique_name: TFACT_KPI_DIM_SNAPSHOT_DATE_ID_to_Date Dimension_Date Level
