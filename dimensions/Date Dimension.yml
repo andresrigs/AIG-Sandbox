@@ -1,6 +1,26 @@
 unique_name: Date Dimension
 object_type: dimension
 label: Date Dimension
+calculation_groups:
+  - unique_name: Date Dimension Calculation Group
+    label: Date Dimension Calculation Group
+    calculated_members:
+      - unique_name: Current
+        description: The measure's value for the current dimension members in the query.
+        template: Current
+        use_input_metric_format: true
+      - unique_name: Last Year
+        description: Last Year's value for the current dimension member.
+        template: Last Year
+        use_input_metric_format: true
+      - unique_name: Year to Date
+        description: >-
+          Year to Date aggregation of [Measures] using each measure's
+          aggregation function. Works for each level of the hierarchy,
+          constraining each member to the set of siblings within the Ancestor
+          Year.
+        template: Year to Date
+        use_input_metric_format: true
 hierarchies:
   - unique_name: Date Dimension Hierarchy
     label: Date Dimension Hierarchy
