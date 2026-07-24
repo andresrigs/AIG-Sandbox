@@ -1,0 +1,8 @@
+unique_name: 30 days Running Sum
+object_type: metric_calc
+label: 30 days Running Sum
+expression: |-
+  SUM(
+      [Fiscal Date Dimension].[Fiscal Date Dimension Hierarchy].[Fiscal Date Level].CurrentMemberMembers.Lag(29) : [Fiscal Date Dimension].[Fiscal Date Dimension Hierarchy].CurrentMember,
+      [Measures].[m_TFACT_KPI_INCURRED_LOSS_AMT_sum]
+  )
