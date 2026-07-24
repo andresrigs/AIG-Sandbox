@@ -1,0 +1,6 @@
+unique_name: m_TFACT_KPI_ACCIDENT_INVESTMENT_INCOME_AMT_sum
+object_type: metric
+label: Investment Income Amount
+calculation_method: sum
+column: INVESTMENT_INCOME_AMT
+dataset: TFACT_KPI_ACCIDENT

@@ -1,0 +1,25 @@
+unique_name: Common Date
+object_type: model
+label: Common Date
+metrics:
+  - unique_name: m_TFACT_KPI_NET_WRITTEN_PREMIUM_AMT_sum
+  - unique_name: m_TFACT_KPI_ACCIDENT_INVESTMENT_INCOME_AMT_sum
+relationships:
+  - unique_name: >-
+      TFACT_KPI_ACCIDENT_DIM_ACCIDENT_MONTH_END_DATE_ID_to_Date Dimension_Date
+      Level
+    from:
+      dataset: TFACT_KPI_ACCIDENT
+      join_columns:
+        - DIM_ACCIDENT_MONTH_END_DATE_ID
+    to:
+      dimension: Date Dimension
+      level: Date Level
+  - unique_name: TFACT_KPI_DIM_FISCAL_MONTH_END_DATE_ID_to_Date Dimension_Date Level
+    from:
+      dataset: TFACT_KPI
+      join_columns:
+        - DIM_FISCAL_MONTH_END_DATE_ID
+    to:
+      dimension: Date Dimension
+      level: Date Level

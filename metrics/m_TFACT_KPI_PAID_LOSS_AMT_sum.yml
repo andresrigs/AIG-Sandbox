@@ -4,3 +4,4 @@ label: Paid Loss Amount
 calculation_method: sum
 column: PAID_LOSS_AMT
 dataset: TFACT_KPI
+format: $#,##0.00

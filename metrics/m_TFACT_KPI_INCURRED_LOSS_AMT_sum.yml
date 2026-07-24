@@ -4,3 +4,4 @@ label: Incurred Loss Amount
 calculation_method: sum
 column: INCURRED_LOSS_AMT
 dataset: TFACT_KPI
+format: $#,##0.00
