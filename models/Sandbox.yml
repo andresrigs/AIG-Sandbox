@@ -1,6 +1,7 @@
 unique_name: Sandbox
 object_type: model
 label: Sandbox
+dimensions: []
 metrics:
   - unique_name: m_TFACT_KPI_PAID_LOSS_AMT_sum
     folder: Amount Metrics
