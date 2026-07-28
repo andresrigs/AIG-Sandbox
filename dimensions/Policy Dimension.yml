@@ -1,0 +1,41 @@
+unique_name: Policy Dimension
+object_type: dimension
+label: Policy Dimension
+description: Commercial policy master; policy number is the user-facing label.
+type: standard
+hierarchies:
+- unique_name: Policy Hierarchy
+  label: Policy Hierarchy
+  folder: Policy Attributes
+  levels:
+  - unique_name: Policy
+    secondary_attributes:
+    - unique_name: Insured Name
+      label: Insured Name
+      dataset: TDIM_POLICY
+      name_column: INSURED_NM
+      key_columns:
+      - INSURED_NM
+      description: Insured organisation name.
+    - unique_name: Policy Type
+      label: Policy Type
+      dataset: TDIM_POLICY
+      name_column: POLICY_TYPE_CD
+      key_columns:
+      - POLICY_TYPE_CD
+      description: Policy type code.
+    - unique_name: Policy Market Segment
+      label: Policy Market Segment
+      dataset: TDIM_POLICY
+      name_column: MARKET_SEGMENT_CD
+      key_columns:
+      - MARKET_SEGMENT_CD
+      description: Market segment code on the policy.
+level_attributes:
+- unique_name: Policy
+  label: Policy
+  dataset: TDIM_POLICY
+  name_column: ORIGINAL_POLICY_NO
+  key_columns:
+  - DIM_POLICY_ID
+  is_unique_key: true

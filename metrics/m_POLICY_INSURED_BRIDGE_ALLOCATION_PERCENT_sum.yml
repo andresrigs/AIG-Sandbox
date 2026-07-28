@@ -1,0 +1,7 @@
+unique_name: m_POLICY_INSURED_BRIDGE_ALLOCATION_PERCENT_sum
+object_type: metric
+label: Allocation Percent
+calculation_method: sum
+column: ALLOCATION_PERCENT
+dataset: POLICY_INSURED_BRIDGE
+format: percent

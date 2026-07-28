@@ -1,0 +1,55 @@
+unique_name: Client Dimension
+object_type: dimension
+label: Client Dimension
+description: Insured client master with market segment / sub-segment and domicile.
+type: standard
+hierarchies:
+- unique_name: Client Hierarchy
+  label: Client Hierarchy
+  folder: Client Attributes
+  levels:
+  - unique_name: Market Segment
+  - unique_name: Market Sub Segment
+  - unique_name: Client
+    secondary_attributes:
+    - unique_name: Domicile Country
+      label: Domicile Country
+      dataset: TDIM_CLIENT
+      name_column: DOMICILE_COUNTRY_NM
+      key_columns:
+      - DOMICILE_COUNTRY_NM
+      description: Client domicile country.
+    - unique_name: Client Region
+      label: Client Region
+      dataset: TDIM_CLIENT
+      name_column: REGION_NM
+      key_columns:
+      - REGION_NM
+      description: Client HQ region.
+    - unique_name: Multinational Indicator
+      label: Multinational Indicator
+      dataset: TDIM_CLIENT
+      name_column: MULTINATIONAL_IN
+      key_columns:
+      - MULTINATIONAL_IN
+      description: Multinational client flag.
+level_attributes:
+- unique_name: Market Segment
+  label: Market Segment
+  dataset: TDIM_CLIENT
+  name_column: MARKET_SEGMENT_NM
+  key_columns:
+  - MARKET_SEGMENT_CD
+- unique_name: Market Sub Segment
+  label: Market Sub-Segment
+  dataset: TDIM_CLIENT
+  name_column: MARKET_SUB_SEGMENT_NM
+  key_columns:
+  - MARKET_SUB_SEGMENT_CD
+- unique_name: Client
+  label: Client
+  dataset: TDIM_CLIENT
+  name_column: COMPANY_NM
+  key_columns:
+  - DIM_CLIENT_ID
+  is_unique_key: true

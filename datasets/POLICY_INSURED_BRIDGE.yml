@@ -1,0 +1,12 @@
+unique_name: POLICY_INSURED_BRIDGE
+object_type: dataset
+label: POLICY_INSURED_BRIDGE
+columns:
+  - name: POLICY_ID
+    data_type: decimal(18,2)
+  - name: CLIENT_ID
+    data_type: decimal(18,2)
+  - name: ALLOCATION_PERCENT
+    data_type: decimal(18,2)
+connection_id: con_SE_DEMO_LIBRARY_AIG_POT
+table: POLICY_INSURED_BRIDGE

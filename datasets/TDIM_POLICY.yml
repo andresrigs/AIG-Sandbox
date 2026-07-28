@@ -1,0 +1,48 @@
+unique_name: TDIM_POLICY
+object_type: dataset
+label: TDIM_POLICY
+columns:
+  - name: DIM_POLICY_ID
+    data_type: decimal(38,0)
+  - name: AGREEMENT_ID
+    data_type: string
+  - name: DIM_POLICY_KEY
+    data_type: string
+  - name: DIM_POLICY_EFF_DT
+    data_type: datetime
+  - name: ORIGINAL_POLICY_NO
+    data_type: string
+  - name: POLICY_EFFECTIVE_DT
+    data_type: date
+  - name: POLICY_EXPIRATION_DT
+    data_type: date
+  - name: COMPANY_CD
+    data_type: string
+  - name: COMPANY_NM
+    data_type: string
+  - name: COUNTRY_CD
+    data_type: string
+  - name: COUNTRY_NM
+    data_type: string
+  - name: SOURCE_SYSTEM_CD
+    data_type: string
+  - name: SYSTEM_ID
+    data_type: string
+  - name: MARKET_SEGMENT_CD
+    data_type: string
+  - name: COMMISION_RATIO
+    data_type: decimal(38,10)
+  - name: POLICY_TYPE_CD
+    data_type: string
+  - name: INSURED_NM
+    data_type: string
+  - name: POLICY_LIMIT
+    data_type: decimal(38,8)
+  - name: POLICY_DEDUCTIBLE
+    data_type: decimal(38,8)
+  - name: CREATE_TS
+    data_type: datetime
+  - name: BATCH_ID
+    data_type: decimal(38,0)
+connection_id: con_SE_DEMO_LIBRARY_AIG_POT
+table: TDIM_POLICY
