@@ -1,0 +1,12 @@
+unique_name: TDIM_CURR
+object_type: dataset
+label: TDIM_CURR
+columns:
+  - name: TO_CURR
+    data_type: string
+  - name: DIM_DATE_ID
+    data_type: decimal(38,0)
+  - name: CONV_RATE
+    data_type: decimal(18,2)
+connection_id: con_SE_DEMO_LIBRARY_AIG_POT
+table: TDIM_CURR

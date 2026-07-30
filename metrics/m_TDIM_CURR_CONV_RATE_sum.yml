@@ -1,0 +1,7 @@
+unique_name: m_TDIM_CURR_CONV_RATE_sum
+object_type: metric
+label: Conversion Rate
+calculation_method: sum
+column: CONV_RATE
+dataset: TDIM_CURR
+format: $#,##0.00

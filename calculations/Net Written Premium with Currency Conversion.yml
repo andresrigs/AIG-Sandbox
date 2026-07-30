@@ -1,0 +1,13 @@
+unique_name: Net Written Premium with Currency Conversion
+object_type: metric_calc
+label: Net Written Premium with Currency Conversion
+expression: |-
+  SUM(
+            DESCENDANTS(
+              [Fiscal Date Dimension].[Fiscal Date Hierarchy].CurrentMember,
+              [Fiscal Date Dimension].[Fiscal Date Hierarchy].[Fiscal Date],
+              SELF
+            ),
+            [Measures].[m_TFACT_KPI_NET_WRITTEN_PREMIUM_AMT_sum] * [Measures].[m_TDIM_CURR_CONV_RATE_sum]
+          )
+format: $#,##0.00

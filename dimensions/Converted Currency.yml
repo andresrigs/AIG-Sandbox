@@ -1,0 +1,18 @@
+unique_name: Converted Currency
+object_type: dimension
+label: Converted Currency
+hierarchies:
+  - unique_name: To_Curr_Hierarchy
+    label: To Curr Hierarchy
+    levels:
+      - unique_name: To_Curr_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: To_Curr_Level
+    label: To Curr Level
+    contains_unique_names: false
+    dataset: TDIM_CURR
+    key_columns:
+      - TO_CURR
+    name_column: TO_CURR
+type: standard

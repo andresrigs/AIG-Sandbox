@@ -1,7 +1,8 @@
 unique_name: Sandbox
 object_type: model
 label: Sandbox
-dimensions: []
+dimensions:
+  - Converted Currency
 metrics:
   - unique_name: m_TFACT_KPI_PAID_LOSS_AMT_sum
     folder: Amount Metrics
@@ -12,6 +13,8 @@ metrics:
   - unique_name: m_POLICY_INSURED_BRIDGE_ALLOCATION_PERCENT_sum
   - unique_name: Net Written Premium with Allocation
   - unique_name: m_TFACT_KPI_NET_WRITTEN_PREMIUM_AMT_sum
+  - unique_name: m_TDIM_CURR_CONV_RATE_sum
+  - unique_name: Net Written Premium with Currency Conversion
 relationships:
   - unique_name: TFACT_KPI_DIM_SNAPSHOT_DATE_ID_to_Date Dimension_Date Level
     from:
@@ -64,3 +67,11 @@ relationships:
     to:
       dimension: Client Dimension
       level: Client
+  - unique_name: TDIM_CURR_DIM_DATE_ID_to_Date Dimension_Date Level
+    from:
+      dataset: TDIM_CURR
+      join_columns:
+        - DIM_DATE_ID
+    to:
+      dimension: Date Dimension
+      level: Date Level
