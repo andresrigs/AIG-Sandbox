@@ -1,0 +1,7 @@
+unique_name: m_TFACT_KPI_NET_COMMISSION_AMT_sum
+object_type: metric
+label: Net Commission Amount
+calculation_method: sum
+column: NET_COMMISSION_AMT
+dataset: TFACT_KPI
+format: $#,##0.00

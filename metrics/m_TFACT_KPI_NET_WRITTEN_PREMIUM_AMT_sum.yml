@@ -4,4 +4,5 @@ label: Net Written Premium Amount
 calculation_method: sum
 column: NET_WRITTEN_PREMIUM_AMT
 dataset: TFACT_KPI
+format: $#,##0.00
 unrelated_dimensions_handling: repeat
