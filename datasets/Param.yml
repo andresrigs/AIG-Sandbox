@@ -15,3 +15,5 @@ sql: |-
   SELECT .75,'75%'
   UNION
   SELECT 1,'100%'
+  UNION
+  SELECT 0,'0%'

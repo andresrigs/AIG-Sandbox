@@ -15,4 +15,5 @@ level_attributes:
     key_columns:
       - PARAM_DSC
     name_column: PARAM_DSC
+    sort_column: PARAM_PCT
 type: standard
