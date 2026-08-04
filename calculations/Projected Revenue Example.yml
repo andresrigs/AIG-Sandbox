@@ -3,3 +3,4 @@ object_type: metric_calc
 label: Projected Revenue Example
 expression: >-
   [Measures].[m_TFACT_KPI_NET_WRITTEN_PREMIUM_AMT_sum]*(1+[Measures].[m_Param_PARAM_PCT_max])
+format: $#,##0.00
