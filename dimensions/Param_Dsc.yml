@@ -1,0 +1,18 @@
+unique_name: Param_Dsc
+object_type: dimension
+label: Parameter
+hierarchies:
+  - unique_name: Param_Dsc_Hierarchy
+    label: Param Dsc Hierarchy
+    levels:
+      - unique_name: Param_Dsc_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Param_Dsc_Level
+    label: Param Dsc Level
+    contains_unique_names: false
+    dataset: Param
+    key_columns:
+      - PARAM_DSC
+    name_column: PARAM_DSC
+type: standard

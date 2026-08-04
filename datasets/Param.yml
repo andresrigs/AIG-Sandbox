@@ -1,0 +1,17 @@
+unique_name: Param
+object_type: dataset
+label: Param
+columns:
+  - name: PARAM_PCT
+    data_type: decimal(3,2)
+  - name: PARAM_DSC
+    data_type: string
+connection_id: con_SE_DEMO_LIBRARY_AIG_POT
+sql: |-
+  SELECT .25 as param_pct, '25%' param_dsc
+  UNION
+  SELECT .5,'50%'
+  UNION
+  SELECT .75,'75%'
+  UNION
+  SELECT 1,'100%'

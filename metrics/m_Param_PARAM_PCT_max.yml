@@ -1,0 +1,8 @@
+unique_name: m_Param_PARAM_PCT_max
+object_type: metric
+label: Param Pct
+calculation_method: maximum
+column: PARAM_PCT
+dataset: Param
+format: percent
+unrelated_dimensions_handling: repeat

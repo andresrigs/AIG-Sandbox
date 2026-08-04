@@ -3,6 +3,7 @@ object_type: model
 label: Sandbox
 dimensions:
   - Converted Currency
+  - Param_Dsc
 metrics:
   - unique_name: m_TFACT_KPI_PAID_LOSS_AMT_sum
     folder: Amount Metrics
@@ -15,6 +16,8 @@ metrics:
   - unique_name: m_TFACT_KPI_NET_WRITTEN_PREMIUM_AMT_sum
   - unique_name: m_TDIM_CURR_CONV_RATE_sum
   - unique_name: Net Written Premium with Currency Conversion
+  - unique_name: m_Param_PARAM_PCT_max
+  - unique_name: Projected Revenue Example
 relationships:
   - unique_name: TFACT_KPI_DIM_SNAPSHOT_DATE_ID_to_Date Dimension_Date Level
     from:
