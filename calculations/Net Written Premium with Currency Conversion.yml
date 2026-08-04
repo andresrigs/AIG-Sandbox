@@ -5,7 +5,7 @@ expression: |-
   SUM(
             DESCENDANTS(
               [Fiscal Date Dimension].[Fiscal Date Hierarchy].CurrentMember,
-              [Fiscal Date Dimension].[Fiscal Date Hierarchy].[Fiscal Date],
+              [Fiscal Date Dimension].[Fiscal Date Hierarchy].[Fiscal Date Level],
               SELF
             ),
             [Measures].[m_TFACT_KPI_NET_WRITTEN_PREMIUM_AMT_sum] * [Measures].[m_TDIM_CURR_CONV_RATE_sum]

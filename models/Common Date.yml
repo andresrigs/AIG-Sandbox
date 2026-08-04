@@ -4,6 +4,8 @@ label: Common Date
 metrics:
   - unique_name: m_TFACT_KPI_NET_WRITTEN_PREMIUM_AMT_sum
   - unique_name: m_TFACT_KPI_ACCIDENT_INVESTMENT_INCOME_AMT_sum
+  - unique_name: m_TFACT_KPI_NET_COMMISSION_AMT_sum
+  - unique_name: m_TFACT_KPI_INCURRED_LOSS_AMT_sum (1)
 relationships:
   - unique_name: >-
       TFACT_KPI_ACCIDENT_DIM_ACCIDENT_MONTH_END_DATE_ID_to_Date Dimension_Date
@@ -12,6 +14,7 @@ relationships:
       dataset: TFACT_KPI_ACCIDENT
       join_columns:
         - DIM_ACCIDENT_MONTH_END_DATE_ID
+    role_play: Common {0}
     to:
       dimension: Date Dimension
       level: Date Level
@@ -20,6 +23,57 @@ relationships:
       dataset: TFACT_KPI
       join_columns:
         - DIM_FISCAL_MONTH_END_DATE_ID
+    role_play: Common {0}
+    to:
+      dimension: Date Dimension
+      level: Date Level
+  - unique_name: TFACT_KPI_DIM_POLICY_ID_to_Policy Dimension_Policy
+    from:
+      dataset: TFACT_KPI
+      join_columns:
+        - DIM_POLICY_ID
+    to:
+      dimension: Policy Dimension
+      level: Policy
+  - unique_name: TFACT_KPI_DIM_CLIENT_ID_to_Client Dimension_Client
+    from:
+      dataset: TFACT_KPI
+      join_columns:
+        - DIM_CLIENT_ID
+    to:
+      dimension: Client Dimension
+      level: Client
+  - unique_name: TFACT_KPI_ACCIDENT_DIM_POLICY_ID_to_Policy Dimension_Policy
+    from:
+      dataset: TFACT_KPI_ACCIDENT
+      join_columns:
+        - DIM_POLICY_ID
+    to:
+      dimension: Policy Dimension
+      level: Policy
+  - unique_name: TFACT_KPI_ACCIDENT_DIM_CLIENT_ID_to_Client Dimension_Client
+    from:
+      dataset: TFACT_KPI_ACCIDENT
+      join_columns:
+        - DIM_CLIENT_ID
+    to:
+      dimension: Client Dimension
+      level: Client
+  - unique_name: TFACT_KPI_DIM_ACCIDENT_MONTH_END_DATE_ID_to_Date Dimension_Date Level
+    from:
+      dataset: TFACT_KPI
+      join_columns:
+        - DIM_ACCIDENT_MONTH_END_DATE_ID
+    role_play: Accident {0}
+    to:
+      dimension: Date Dimension
+      level: Date Level
+  - unique_name: TFACT_KPI_DIM_SNAPSHOT_DATE_ID_to_Date Dimension_Date Level
+    from:
+      dataset: TFACT_KPI
+      join_columns:
+        - DIM_SNAPSHOT_DATE_ID
+    role_play: Snapshot {0}
     to:
       dimension: Date Dimension
       level: Date Level

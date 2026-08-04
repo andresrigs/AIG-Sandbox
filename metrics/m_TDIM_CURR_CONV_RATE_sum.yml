@@ -5,3 +5,4 @@ calculation_method: sum
 column: CONV_RATE
 dataset: TDIM_CURR
 format: $#,##0.00
+unrelated_dimensions_handling: repeat

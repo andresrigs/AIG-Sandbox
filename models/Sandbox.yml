@@ -75,6 +75,7 @@ relationships:
       dataset: TDIM_CURR
       join_columns:
         - DIM_DATE_ID
+    role_play: Fiscal {0}
     to:
       dimension: Date Dimension
       level: Date Level

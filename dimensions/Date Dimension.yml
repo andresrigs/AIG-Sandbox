@@ -1,74 +1,52 @@
 unique_name: Date Dimension
 object_type: dimension
 label: Date Dimension
-calculation_groups:
-  - unique_name: Date Dimension Calculation Group
-    label: Date Dimension Calculation Group
-    calculated_members:
-      - unique_name: Current
-        description: The measure's value for the current dimension members in the query.
-        template: Current
-        use_input_metric_format: true
-      - unique_name: Last Year
-        description: Last Year's value for the current dimension member.
-        template: Last Year
-        use_input_metric_format: true
-      - unique_name: Year to Date
-        description: >-
-          Year to Date aggregation of [Measures] using each measure's
-          aggregation function. Works for each level of the hierarchy,
-          constraining each member to the set of siblings within the Ancestor
-          Year.
-        template: Year to Date
-        use_input_metric_format: true
+description: >-
+  Calendar date dimension (Year > Quarter > Month > Day), role-played as
+  snapshot, fiscal and accident month-end.
 hierarchies:
-  - unique_name: Date Dimension Hierarchy
-    label: Date Dimension Hierarchy
+  - unique_name: Date Hierarchy
+    label: Date Hierarchy
+    filter_empty: 'yes'
+    folder: Date Attributes
     levels:
-      - unique_name: Year Level
-      - unique_name: Month Level
-        secondary_attributes:
-          - unique_name: MONTH_OF_QUARTER_NO
-            label: MONTH_OF_QUARTER_NO
-            contains_unique_names: false
-            dataset: TDIM_DATE
-            is_unique_key: false
-            key_columns:
-              - MONTH_OF_QUARTER_NO
-            name_column: MONTH_OF_QUARTER_NO
+      - unique_name: Year
+      - unique_name: Quarter
+      - unique_name: Month
       - unique_name: Date Level
-        secondary_attributes:
-          - unique_name: DAY_OF_YEAR_NO
-            label: DAY_OF_YEAR_NO
-            contains_unique_names: false
-            dataset: TDIM_DATE
-            is_unique_key: false
-            key_columns:
-              - DAY_OF_YEAR_NO
-            name_column: DAY_OF_YEAR_NO
 level_attributes:
-  - unique_name: Date Level
-    label: Date Level
-    contains_unique_names: false
-    dataset: TDIM_DATE
-    key_columns:
-      - DIM_DATE_ID
-    name_column: FULL_DT
-    time_unit: day
-  - unique_name: Month Level
-    label: Month Level
-    contains_unique_names: false
-    dataset: TDIM_DATE
-    key_columns:
-      - MONTH_YEAR_NO
-    name_column: MONTH_NM
-    time_unit: month
-  - unique_name: Year Level
-    label: Year Level
-    contains_unique_names: false
+  - unique_name: Year
+    label: Year
     dataset: TDIM_DATE
     key_columns:
       - YEAR_NO
     name_column: YEAR_NO
+    sort_column: YEAR_NO
     time_unit: year
+  - unique_name: Quarter
+    label: Quarter
+    dataset: TDIM_DATE
+    key_columns:
+      - YEAR_NO
+      - QUARTER_NO
+    name_column: QUARTER_NO
+    time_unit: quarter
+  - unique_name: Month
+    label: Month
+    dataset: TDIM_DATE
+    key_columns:
+      - YEAR_NO
+      - MONTH_NO
+    name_column: MONTH_NM
+    sort_column: MONTH_YEAR_NO
+    time_unit: month
+  - unique_name: Date Level
+    label: Date Level
+    dataset: TDIM_DATE
+    is_unique_key: true
+    key_columns:
+      - DIM_DATE_ID
+    name_column: FULL_DT
+    sort_column: DIM_DATE_ID
+    time_unit: day
 type: time
